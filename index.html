@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>News Feed</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/5.0.0/sanitize.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+    <main id="page-wrapper">
+        <section id="posts-list">
+            <header id="posts-list-header">
+                <h3 class="header-text">Posts</h3>
+            </header>
+
+            <section id="posts-target"></section>
+
+            <div class="margin-2rem">
+                <button id="create-post" onclick="createPost()">+ Create Post</button>
+                <button id="reset" onclick="resetNewsFeed()">Reset To Defaults</button>
+            </div>
+        </section>
+
+        <aside id="deleted-comments-list">
+            <header id="deleted-comments-list-header">
+                <h3 class="header-text">Deleted Comments</h3>
+            </header>
+
+            <section id="deleted-comments-target"></section>
+        </aside>
+    </main>
+
+    <script src="database.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

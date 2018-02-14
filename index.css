@@ -1,0 +1,126 @@
+#page-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.margin-2rem {
+    margin: 2rem;
+}
+
+.padding-2rem {
+    padding: 2rem;
+}
+
+#posts-list,
+#deleted-comments-list {
+    padding: 10px;
+}
+
+#posts-list .header-text,
+#deleted-comments-list .header-text {
+    margin: 0;
+    padding: .2rem .6rem;
+}
+
+#posts-list {
+    width: 100%;
+}
+
+#posts-list-header {
+    background-color: #FFEEEC;
+}
+
+.post {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
+}
+
+.post-title {
+    margin-top: 0;
+}
+
+#deleted-comments-list {
+    width: 100%;
+}
+
+#deleted-comments-list-header {
+    background-color: #ECEEFF;
+}
+
+button.add-comment {
+    font-size: .75rem;
+    padding: .4rem .8rem;
+    background-color: #ccc;
+    display: block;
+    cursor: pointer;
+}
+
+.comment {
+    border: 1px solid #ccc;
+    padding: .75rem;
+    padding-right: 1.5rem;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.comment:last-of-type {
+    margin-bottom: 0;
+}
+
+button.delete-comment {
+    position: absolute;
+    right: .3rem;
+    top: -.2rem;
+    border: none;
+    color: #C00;
+    padding: 0;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.comment p:first-of-type,
+.deleted-comment p:first-of-type {
+    margin-top: 0;
+}
+
+.comment p:last-of-type,
+.deleted-comment p:last-of-type {
+    margin-bottom: 0;
+}
+
+.deleted-comment {
+    border: 1px solid #ccc;
+    padding: .75rem;
+    position: relative;
+}
+
+button#create-post {
+    display: inline-block;
+    padding: .4rem .8rem;
+    font-size: .8rem;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+button#reset {
+    display: inline-block;
+    padding: .4rem .8rem;
+    margin-left: 2rem;
+    font-size: .8rem;
+    background-color: none;
+    cursor: pointer;
+}
+
+@media all and (min-width: 991px) {
+    #posts-list {
+        width: 67%;
+        max-width: 60rem;
+    }
+
+    #deleted-comments-list {
+        width: 33%;
+        max-width: 30rem;
+    }
+}
