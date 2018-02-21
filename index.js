@@ -4,7 +4,6 @@ const $deletedCommentsTarget = document.querySelector('#deleted-comments-target'
 // localStorage items set in database.js
 let postCounter = JSON.parse(localStorage.getItem('postCounter')) // used as the id for a new post
 let commentCounter = JSON.parse(localStorage.getItem('commentCounter')) // used as the id for a new comment
-
 let posts = JSON.parse(localStorage.getItem('posts'))
 let comments = JSON.parse(localStorage.getItem('comments'))
 let deletedComments = JSON.parse(localStorage.getItem('deletedComments'))
