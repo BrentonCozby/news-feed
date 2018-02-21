@@ -18,21 +18,23 @@ function createPost() {
 
     postCounter += 1
 
-    posts[postCounter] = {
+    const newPost = {
         title: title,
         body: [],
         commentIds: []
     }
 
-    posts[postCounter].body.push(paragraph)
+    newPost.body.push(paragraph)
 
     while (confirm('Add another paragraph?')) {
         paragraph = window.prompt('New paragraph:')
 
         if (paragraph) {
-            posts[postCounter].body.push(paragraph)
+            newPost.body.push(paragraph)
         }
     }
+    
+    posts[postCounter] = newPost
 
     renderPosts()
 
@@ -49,23 +51,24 @@ function addComment(postId) {
     }
 
     commentCounter += 1
+    posts[postId].commentIds.push(commentCounter)
 
-    comments[commentCounter] = {
+    const newComment = {
         postId: postId,
         body: []
     }
 
-    comments[commentCounter].body.push(paragraph)
+    newComment.body.push(paragraph)
 
     while (confirm('Add another paragraph?')) {
         paragraph = window.prompt('New paragraph')
 
         if (paragraph) {
-            comments[commentCounter].body.push(paragraph)
+            newComment.body.push(paragraph)
         }
     }
-
-    posts[postId].commentIds.push(commentCounter)
+    
+    comments[commentCounter] = newComment
 
     renderPosts()
 
